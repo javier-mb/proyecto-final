@@ -1,0 +1,263 @@
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+/* VARIABLES */
+
+:root{
+    --colorGray: #2e2a2c;
+    --color1: #3D8F34;
+    --color2: #9ecd1e;
+    --color3: #eae562;
+    --color4: #ffffa5;
+    --color5: #ffffe3;
+    --color6: #ffffc5;
+
+    --fontUno:  'Roboto Condensed', sans-serif;
+    --fontDos:  'Josefin Sans', sans-serif;
+}
+
+
+/* RESETEAR */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* COMIENZO DE HEADER */ 
+header{
+    background-color: var(--color6);
+}
+
+nav div{
+    background-color: var(--color6);
+}
+
+.logo{
+    height: 110px;
+    width: 130px;
+}
+
+.btn{
+    background-color: var(--color1);
+    color: var(--color5);
+}
+.dropdown-menu{
+    background-color: var(--color6);
+}
+
+.dropdown-menu li a:hover{
+    background-color: var(--color1);
+    color: var(--color6)
+}
+
+/* FIN DE HEADER */
+
+/* COMIENZO DE MAIN */
+
+main{
+    background-color: var(--color6);
+    
+    margin: 20px ;
+}
+
+.row{
+    margin: auto;
+    text-align: center;
+}
+
+.col{
+    margin: 5px ;
+}
+
+.col img{
+    height: 300px;
+    width: 200px;
+}
+
+p{
+    margin: 15px;
+    color: var(--colorGray);
+}
+.container h1 {
+    color: var(--color1);
+}
+/* ABOUT */
+.about{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:  
+        "titulo titulo"
+        "foto frase";
+    justify-items: center;
+    align-items: center;
+}
+.nosotros{
+    color: var(--colorGray);
+    font-size: 2.5rem;
+    font-family: var(--fontDos);
+    line-height: 80px;
+    margin: 20px;
+    width: 100%;
+    overflow: visible;
+}
+
+.titulo{
+    grid-area: titulo;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    padding-top: 30px;
+    text-decoration: underline;
+    word-spacing: 15px;
+    color: var(--colorGray);
+}
+
+.foto{
+    grid-area: foto;
+    width: 100%;
+    clip-path: circle(200px at center);
+}
+
+/*PRODUCTOS */
+
+.grid{
+    display: grid;
+    grid-template-columns:  1fr;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.containerProductos{
+    box-shadow: 0 2px 8px 0 var(--color5);
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color5);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.portada{
+    position: absolute;
+    background-image: url(http://saludhoy.com.ar/wp-content/uploads/2016/10/mateee.jpg);
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.productoImg{
+    width: 8rem;
+    clip-path: circle(60px at center);
+    margin-top: 4.5rem;
+}
+
+.nombre{
+    font-size: 1.5rem;
+}
+
+.descripcion{
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+.boton{
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color:var(--color1);
+    padding: 1rem;
+}
+
+/*FIRST MOBILE*/
+@media screen and (min-width: 100px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about p{
+        font-size: 1rem;
+        line-height: 20px;
+
+    }
+}
+
+@media screen and (min-width: 500px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about p{
+        font-size: 2.5rem;
+        
+        line-height: 80px;
+    }
+}
+
+@media screen and (min-width: 760px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/*CONTACTO*/
+
+.contacto{
+    font-family: var(--fontDos);
+    line-height: 30px;
+
+    margin: 20px;
+}
+
+.contacto h1{
+    text-align: center;
+}
+.contacto form{
+    padding-left: 20px;
+}
+
+.contacto form label{
+    font-size: 20px;
+    
+}
+
+.contacto form input{
+  
+    margin-bottom: 15px;
+}
+
+.boton{
+    background-color: var(--color1);
+    color: white;
+    padding: 5px;
+    border:2px solid var(--colorGray);
+    width: 100px;
+}
+
+/* COMIENZO FOOTER */
+
+footer{
+    height: 10vh;
+    background-color: var(--color6);
+    text-align: center;
+    color: var(--color1);
+    text-align: center;
+    padding-top: 15px;
+}
